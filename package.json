@@ -1,0 +1,12 @@
+{
+  "name": "generator-ts-react-redux",
+  "version": "1.0.0",
+  "description": "",
+  "files": [ "generators" ],
+  "author": "Ross Bradbrook",
+  "license": "ISC",
+  "keywords" : ["yeoman-generator"],
+  "dependencies": {
+    "yeoman-generator": "^1.0.1"
+  }
+}

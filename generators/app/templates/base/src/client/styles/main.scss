@@ -1,0 +1,57 @@
+$black: #333;
+$primary: #639;
+$text-on-primary: #FFF;
+$page-width: 1200px;
+$gutter: 8px;
+
+body {
+    color: $black;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+    color: $primary;
+}
+
+.header {
+    background-color: $primary;
+    padding: $gutter;
+
+    h1 {
+        color: $text-on-primary;
+        margin: 0;
+    }
+}
+
+.content {
+    width: $page-width;
+    margin: auto;
+    padding: 0 ($gutter * 2);
+}
+
+
+.completed {
+    text-decoration: line-through;
+}
+
+table {
+    border: 1px solid $black;
+    border-collapse: collapse;
+
+    th {
+        background-color: $primary;
+        color: $text-on-primary;
+        text-align: left;
+    }
+
+    th, td {
+        padding: $gutter ($gutter * 2);
+    }
+   
+    tfoot {
+        td{
+            border-top: 1px solid $black;
+        }
+    }
+}
