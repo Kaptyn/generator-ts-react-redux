@@ -37,12 +37,14 @@ app.get("*", (req,res) => {
             res.redirect(302, redirectLocation.pathname + redirectLocation.search)
         } else if (renderProps) {
             // Renders the react components as a string, and sends it back to the client.
-            res.status(200).send(
-                renderToStaticMarkup(<MasterPage>
+            let pageContents =  renderToString(
                     <Provider store={store}>
                         <RouterContext {...renderProps} />
                     </Provider>
-                </MasterPage>
+            );
+
+            res.status(200).send(
+                renderToStaticMarkup(<MasterPage content={pageContents}></MasterPage>
             ));
         } else {
             res.status(404).send('Not found')
